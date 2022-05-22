@@ -30,7 +30,7 @@ class Sprite {
         this.currentAnimation = "walk-left"; // config.currentAnimation || "idle-down";
         this.currentAnimationFrame = 0;
 
-        this.animationFrameLimit = config.animationFrameLimit || 16;
+        this.animationFrameLimit = config.animationFrameLimit || 10;
         this.animationFrameProgress = this.animationFrameLimit;
 
         //Referencing the game Object
@@ -68,12 +68,12 @@ class Sprite {
     }
 
     draw(ctx) {
-        const x = this.gameObject.x - 8;
-        const y = this.gameObject.y + 1;
+        const x = this.gameObject.x;
+        const y = this.gameObject.y-1;
 
         this.isShadowLoaded && ctx.drawImage(
             this.shadow,
-            x, y-1,
+            x-8, y+1,
         );
 
         const [frameX, frameY] = this.frame; 
