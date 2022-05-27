@@ -30,11 +30,11 @@ window.OverworldMaps = {
                 y: utils.withGrid(6),
             }),
 
-    /*      npc1: new Person({
+          npc1: new Person({
                 x: utils.withGrid(3),
                 y: utils.withGrid(3),
-                src: "./assets/hero.png",
-            }),     */ 
+                src: "./assets/extra-sprite.png",
+            }),      
 
         }
     }
